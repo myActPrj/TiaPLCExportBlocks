@@ -1,0 +1,11 @@
+﻿TYPE "AO_SETTINGS"
+VERSION : 0.1
+   STRUCT
+      Raw_Min { S7_SetPoint := 'True'} : Int := 0;   // Минимальное значение в шкале АЦП
+      Raw_Max { S7_SetPoint := 'True'} : Int := 27648;   // Максимальное значение в шкале АЦП
+      EU_Raw_Min { S7_SetPoint := 'True'} : Real := 0.0;   // Значение в инж. шкале соответвует АЦП мин
+      EU_Raw_Max { S7_SetPoint := 'True'} : Real := 100.0;   // Значение в инж. шкале соответвует АЦП макс.
+   END_STRUCT;
+
+END_TYPE
+

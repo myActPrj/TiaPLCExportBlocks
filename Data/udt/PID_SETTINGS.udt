@@ -1,0 +1,18 @@
+﻿TYPE "PID_SETTINGS"
+VERSION : 0.1
+   STRUCT
+      Gain { S7_SetPoint := 'True'} : Real := 1.0;
+      Ti { S7_SetPoint := 'True'} : Real := 20.0;
+      Td { S7_SetPoint := 'True'} : Real := 0.0;
+      TdFiltRatio { S7_SetPoint := 'True'} : Real := 0.2;
+      PWeighting { S7_SetPoint := 'True'} : Real := 1.0;
+      DWeighting { S7_SetPoint := 'True'} : Real := 1.0;
+      Cycle { S7_SetPoint := 'True'} : Real := 1.0;
+      OutputUpperLimit_Man { S7_SetPoint := 'True'} : Real := 100.0;
+      OutputLowerLimit_Man { S7_SetPoint := 'True'} : Real := 0.0;
+      OutputUpperLimit_Auto { S7_SetPoint := 'True'} : Real := 100.0;
+      OutputLowerLimit_Auto { S7_SetPoint := 'True'} : Real := 0.0;
+   END_STRUCT;
+
+END_TYPE
+

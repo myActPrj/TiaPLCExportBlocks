@@ -1,0 +1,14 @@
+﻿TYPE "ESD_STS"
+VERSION : 0.1
+   STRUCT
+      Remain_time : Time;   // Время до включения противоаварийной защиты, мс
+      Condition : Bool;   // Условие противоаварийной защиты
+      Active : Bool;   // Противоаварийная защита включена
+      Test : Bool;   // Симуляция условия противоаварийной защиты
+      Deblock : Bool;   // Деблокировка противоаварийной защиты
+      MainCondition : Bool := true;
+      AuxCondition : Bool;
+   END_STRUCT;
+
+END_TYPE
+

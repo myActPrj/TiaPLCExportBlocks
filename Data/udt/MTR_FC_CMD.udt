@@ -1,0 +1,19 @@
+﻿TYPE "MTR_FC_CMD"
+VERSION : 0.1
+   STRUCT
+      Reset : Bool;   // Сброс отказов
+      Start : Bool;   // Пуск
+      Stop : Bool;   // Стоп
+      Auto : Bool;   // Авто режим (Дистанционный)
+      Man : Bool;   // Ручной режим (Дистанционный)
+      RemoteKm : Bool;   // Дистанционный режим от сети
+      RemoteVfd : Bool;   // Дистанционный режим от ТПЧ
+      LocalKm : Bool;   // Местный режим от сети
+      RefAuto : Bool;   // Задание скорости ТПЧ - авто
+      RefMan : Bool;   // Задание скорости ТПЧ - ручн
+      RefCas : Bool;   // Задание скорости ТПЧ - каскад
+      LocalVfd : Bool;   // Местный режим от ТПЧ
+   END_STRUCT;
+
+END_TYPE
+

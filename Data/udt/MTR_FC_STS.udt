@@ -1,0 +1,37 @@
+﻿TYPE "MTR_FC_STS"
+VERSION : 0.1
+   STRUCT
+      Ready : Bool := FALSE;   // Готовность к работе
+      Alarm : Bool := FALSE;   // Наличие нарушений (отказ или неготовность)
+      ExtBlock : Bool := FALSE;   // Наличие внешней блокировки
+      Stopping : Bool := FALSE;   // Остановка
+      Stopped : Bool := FALSE;   // Остановлен
+      Running : Bool := FALSE;   // Работа
+      Starting : Bool := FALSE;   // Запуск
+      spare : Bool := FALSE;   // не использовать - не работает в скриптах SCADA
+      LocalKm : Bool := FALSE;   // Локальное управление активно (сеть) 
+      RemoteKm : Bool := FALSE;   // Дистанционный (сеть) режим активен
+      RemoteVfd : Bool := FALSE;   // Дистанционный (ТПЧ) режим активен
+      LocalVfd : Bool := FALSE;   // Локальное управление активно (сеть) 
+      Auto : Bool := FALSE;   // Управление в дист.: автомат(1)/ручной(0)
+      RefAuto : Bool := FALSE;   // Задание скорости ТПЧ: автомат(1)/ручной(0)
+      RefCas : Bool := FALSE;   // Задание скорости ТПЧ: Активно каскадное регулирование
+      VfdCaptured : Bool := FALSE;   // ТПЧ захвачен приводом
+      VfdConnected : Bool := FALSE;   // Привод подключен к ТПЧ
+      VfdBuzy : Bool := FALSE;   // ТПЧ занят другим приводом
+      EnLocalKm : Bool := FALSE;   // Разрешено переключение в локальн. управление
+      EnRemoteKm : Bool := FALSE;   // Разрешено переключение в дист. (сеть) режим
+      EnRemoteVfd : Bool := FALSE;   // Разрешено переключение в дист. (ТПЧ) режим
+      EnLocalVfd : Bool := FALSE;   // Разрешено переключение в локальн. управление
+      EnRefAuto : Bool := FALSE;   // Разрешено задание скорости в авто
+      EnRefCas : Bool := FALSE;   // Разрешено задание скорости в каскадный
+      Fault : Bool := FALSE;   // Наличие отказа
+      Emmergency : Bool := FALSE;   // Активен сигнал аварийного отключения
+      Control : Bool := FALSE;   // Управляющий сигнал
+      FaultCode : Int := 0;   // Код отказа
+      ExtBlockCode : Int := 0;   // Код блокировки
+      StopCode : Int := 1;   // Код остановки
+   END_STRUCT;
+
+END_TYPE
+

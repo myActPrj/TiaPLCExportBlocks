@@ -1,0 +1,13 @@
+﻿TYPE "AO_STATUS"
+VERSION : 0.1
+   STRUCT
+      EU : Real;   // Значение выхода (инж.)
+      READY : Bool;   // Готовность канала
+      SF : Bool;   // Системная неисправность
+      CFGE : Bool;   // Ошибка настроечных параметров
+      CHF : Bool;   // Ошибка канала
+      FAULT : Bool;   // Отказ канала измерения
+   END_STRUCT;
+
+END_TYPE
+

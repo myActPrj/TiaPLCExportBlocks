@@ -1,0 +1,30 @@
+﻿TYPE "AI_SETTINGS"
+VERSION : 0.1
+   STRUCT
+      Raw_Min { S7_SetPoint := 'True'} : Int := 0;   // Минимальное значение в шкале АЦП
+      Raw_Max { S7_SetPoint := 'True'} : Int := 27648;   // Максимальное значение в шкале АЦП
+      Raw_Unf { S7_SetPoint := 'True'} : Int := -32768;   // Значение отрицательной перегрузки (<=)
+      Raw_Ovf { S7_SetPoint := 'True'} : Int := 32767;   // Значение положителной перегрузки (>=)
+      Cutoff { S7_SetPoint := 'True'} : Real := 0.0;   // Отсечка минимального значения (%)
+      Filter { S7_SetPoint := 'True'} : Real := 50.0;   // Коэффициент фильтрации (%)
+      EU_Min { S7_SetPoint := 'True'} : Real := 0.0;   // Значение в инж. шкале соответвует АЦП мин
+      EU_Max { S7_SetPoint := 'True'} : Real := 100.0;   // Значение в инж. шкале соответвует АЦП макс.
+      EU_Subst { S7_SetPoint := 'True'} : Real := 0.0;   // Договорное значение (ие)
+      HH_Limit { S7_SetPoint := 'True'} : Real;   // Аварийно-высокий предел
+      H_Limit { S7_SetPoint := 'True'} : Real;   // Высокий предел
+      L_Limit { S7_SetPoint := 'True'} : Real;   // Низкий предел
+      LL_Limit { S7_SetPoint := 'True'} : Real;   // Аварийно-низкий предел
+      Hyst { S7_SetPoint := 'True'} : Real;   // Гистерезис сигнализации
+      Sqrt_EN { S7_SetPoint := 'True'} : Bool;   // Разрешение извлечение квадратного корня
+      HH_EN { S7_SetPoint := 'True'} : Bool;   // Разрешение сигнализации аварийно-высокого значения
+      H_EN { S7_SetPoint := 'True'} : Bool;   // Разрешение блокировки высокого значения
+      L_EN { S7_SetPoint := 'True'} : Bool;   // Разрешение сигнализации низкого значения
+      LL_EN { S7_SetPoint := 'True'} : Bool;   // Разрешение блокировки аварийно-низкого значения
+      CH_OFF { S7_SetPoint := 'True'} : Bool;   // Отключение канала измерения
+      SubstIfFault { S7_SetPoint := 'True'} : Bool;   // Договорное при отказе
+      Subst { S7_SetPoint := 'True'} : Bool;   // Подстановка договорного
+      UnfOvf_Disable { S7_SetPoint := 'True'} : Bool;   // Отключить диагностику перегрузок
+   END_STRUCT;
+
+END_TYPE
+

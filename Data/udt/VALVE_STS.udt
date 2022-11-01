@@ -1,0 +1,37 @@
+﻿TYPE "VALVE_STS"
+VERSION : 0.1
+   STRUCT
+      Ready : Bool := FALSE;   // Готовность к работе
+      Alarm : Bool := FALSE;   // Наличие нарушений (отказ или неготовность)
+      ExtBlock : Bool := FALSE;   // Наличие внешней блокировки
+      Closing : Bool := FALSE;   // Закрытие
+      Closed : Bool := FALSE;   // Закрыт
+      Opened : Bool := FALSE;   // Открыт
+      Opening : Bool := FALSE;   // Открытие
+      spare : Bool := FALSE;   // не использовать - не работает в скриптах SCADA
+      Local : Bool := FALSE;   // Локальное управление активно
+      Remote : Bool := FALSE;   // Дистанционный режим активен
+      spare_1x2 : Bool := FALSE;
+      spare_1x3 : Bool := FALSE;
+      spare_1x4 : Bool := FALSE;
+      Auto : Bool := FALSE;   // Управление в дист.: автомат(1)/ручной(0)
+      Cas : Bool := FALSE;   // Активно каскадное регулирование
+      spare_1x7 : Bool := FALSE;
+      SF : Bool := FALSE;   // Системная неисправность (аналог. выход)
+      CFGE : Bool := FALSE;   // Ошибка настроечных параметров (аналог. выход)
+      CHF : Bool := FALSE;   // Ошибка канала (аналог. выход)
+      SWState : Bool := FALSE;   // Неисправность КВ (дискретный)
+      spare_2x4 : Bool := FALSE;
+      spare_2x5 : Bool := FALSE;
+      EnAuto : Bool := FALSE;   // Разрешено переключение в авто
+      EnCas : Bool := FALSE;   // Разрешено переключение в каскадный
+      Fault : Bool := FALSE;   // Наличие отказа
+      Emmergency : Bool := FALSE;   // Активен сигнал аварийного отключения
+      Control : Bool := FALSE;   // Управляющий сигнал
+      FaultCode : Int := 0;   // Код отказа
+      ExtBlockCode : Int := 0;   // Код блокировки
+      POS : Int := 0;   // Текущее положение х10 %
+   END_STRUCT;
+
+END_TYPE
+

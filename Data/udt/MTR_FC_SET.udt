@@ -1,0 +1,9 @@
+﻿TYPE "MTR_FC_SET"
+VERSION : 0.1
+   STRUCT
+      OnTm { S7_SetPoint := 'True'} : Time := T#5s;   // Время отклика на включение
+      OffTm { S7_SetPoint := 'True'} : Time := T#30s;   // Время отклика на выключение
+   END_STRUCT;
+
+END_TYPE
+

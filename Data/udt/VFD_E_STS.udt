@@ -1,0 +1,15 @@
+﻿TYPE "VFD_E_STS"
+VERSION : 0.1
+   STRUCT
+      ErrorCode : Int;   // Код ошибки: 0 - нет, 1 - 42 ошибки, 50- нет связи с пч
+      BitState : Int;   // Состояние привода
+      Ref_Frequency : Int;   // Заданная частота (F)
+      Out_Frequency : Int;   // Выходная частота (H)
+      Out_Current : Int;   // Выходной ток (AXXX.X)
+      Out_Voltage : Int;   // Выходное напряжение (EXXX.X)
+      "DC-Bus_Voltage" : Int;   // Напряжение DC-BUS (UXXX.X)
+      IGBT_Temp : Int;   // Температура IGBT-модуля (0C)
+   END_STRUCT;
+
+END_TYPE
+

@@ -1,0 +1,9 @@
+﻿TYPE "VALVE_SET"
+VERSION : 0.1
+   STRUCT
+      DriveTm { S7_SetPoint := 'True'} : Time := T#30s;   // Время перемещения клапана
+      DriftTm { S7_SetPoint := 'True'} : Time := T#5s;   // Время схода с КВ
+   END_STRUCT;
+
+END_TYPE
+

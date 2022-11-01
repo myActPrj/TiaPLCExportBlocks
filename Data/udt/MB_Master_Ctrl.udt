@@ -1,0 +1,29 @@
+﻿TYPE "MB_Master_Ctrl"
+VERSION : 0.1
+   STRUCT
+      PARAM : Struct
+         Req : Bool;
+         ADDR : UInt := 1;
+         MODE : UInt := 0;
+         DATA_ADDR : UInt := 40001;
+         DATA_LEN : UInt := 100;
+      END_STRUCT;
+      STATUS : Struct
+         Busy : Bool;
+         Done : Bool;
+         Error : Bool;
+         State : Word;
+      END_STRUCT;
+      DATA : Array[0..99] of Int;
+      COM_FAULT : Array[1..64] of Bool;   // Нет свзяи с устройством
+      DEV_FAULT : Array[1..64] of Bool;   // Обнаружена ошибка устройства
+      ActualSlave : USInt := 1;   // Работа с текущим устройством
+      SlaveMax : USInt := 1;   // Максимальное количество устройств в сети
+      UpdateTime : Time;   // Последнее время цикла опроса всех устройств
+      Init_Req : Bool;   // Запрос на инициализацию модуля CM Ppt
+      Init_Done : Bool;   // Иннициализация модуля выполнена успешно
+      Init_Error : Bool;   // Ошибка выполнения иннициализаии модуля
+   END_STRUCT;
+
+END_TYPE
+
